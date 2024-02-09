@@ -6,7 +6,6 @@ export default function App() {
   return (
     <div>
       <BrowserRouter>
-      
       <Header />
       <MarketingApp />
       </BrowserRouter>

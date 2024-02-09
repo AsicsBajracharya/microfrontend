@@ -1,13 +1,14 @@
 import React from "react";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route, Router } from "react-router-dom";
 import { StylesProvider } from "@material-ui/core";
 import Landing from "./components/Landing";
 import Pricing from "./components/Pricing";
-export default function App() {
+export default function App({history}) {
+  console.log('history', history)
   return (
     <div>
       <StylesProvider>
-        <BrowserRouter>
+        <Router history={history}>
           <Switch>
             <Route path="/pricing">
               <Pricing />
@@ -16,7 +17,7 @@ export default function App() {
               <Landing />
             </Route>
           </Switch>
-        </BrowserRouter>
+        </Router>
       </StylesProvider>
     </div>
   );
