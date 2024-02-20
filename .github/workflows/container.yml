@@ -14,10 +14,7 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    env:
-      $(grep -v '^#' env.list | xargs)
-
+    
     steps:
       - uses: actions/checkout@v2
       - run: npm install
